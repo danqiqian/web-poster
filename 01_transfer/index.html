@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Transfer</title>
     <style>
+    html,body{
+      background-color: #000000;
+    }
         #div1{
             height: 100%;
+            top:0;
+            left:0;
         }
         #div2{
             position: absolute;
@@ -18,15 +23,19 @@
             background: #bbbbbb;
         }
         #green{
+          position: absolute;
           width:194px;
           height:444px;
-          margin: 50%;
+          top:0;
+          left:0;
         }
 
     </style>
 </head>
 <body>
     <div id="div1">
+        <img src="white.png" id="green">
+      <img src="red.png" id="green">
       <div id="div2">
         <img src="green.png" id="green">
       </div>
@@ -34,7 +43,7 @@
 <script>
     var flag = false;
     var cur = {
-        // x:0,
+        x:0,
         y:0
     }
     var nx,ny,dx,dy,x,y ;
@@ -63,7 +72,7 @@
             ny = touch.clientY - cur.y;
             // x = dx+nx;
             y = dy+ny;
-            div2.style.left = x+"px";
+            // div2.style.left = x+"px";
             div2.style.top = y +"px";
             //阻止页面的滑动默认事件
             document.addEventListener("touchmove",function(){
