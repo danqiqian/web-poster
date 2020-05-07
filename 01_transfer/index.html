@@ -10,24 +10,25 @@
       background-color: #000000;
     }
         #div1{
-            height: 100%;
-            top:0;
-            left:0;
+            /* height: 100%;
+            width: 100%; */
+            top:50%;
+            left:50%;
         }
         #div2{
             position: absolute;
-            top:0;
-            left:0;
-            width: 100px;
-            height: 100px;
+            top:50%;
+            left:50%;
+            /* width: 100px;
+            height: 100px; */
             /* background: #bbbbbb; */
         }
         #green{
           position: absolute;
-          width:194px;
-          height:444px;
-          top:0;
-          left:0;
+          width:291px;
+          height:666px;
+          top:50%;
+          left:50%;
         }
 
     </style>
@@ -41,7 +42,7 @@
       </div>
     </div>
 <script>
-    document.querySelector("html").style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
     var flag = false;
     var cur = {
         x:0,
