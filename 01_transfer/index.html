@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>适配移动端的拖动效果</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Transfer</title>
     <style>
         #div1{
-            height: 1000px;
+            height: 100%;
         }
         #div2{
             position: absolute;
@@ -15,16 +17,24 @@
             height: 100px;
             background: #bbbbbb;
         }
+        #green{
+          width:194px;
+          height:444px;
+          margin: 50%;
+        }
+
     </style>
 </head>
 <body>
-<div id="div1">
-    <div id="div2"></div>
-</div>
+    <div id="div1">
+      <div id="div2">
+        <img src="green.png" id="green">
+      </div>
+    </div>
 <script>
     var flag = false;
     var cur = {
-        x:0,
+        // x:0,
         y:0
     }
     var nx,ny,dx,dy,x,y ;
@@ -36,7 +46,7 @@
         }else {
             touch = event;
         }
-        cur.x = touch.clientX;
+        // cur.x = touch.clientX;
         cur.y = touch.clientY;
         dx = div2.offsetLeft;
         dy = div2.offsetTop;
@@ -49,9 +59,9 @@
             }else {
                 touch = event;
             }
-            nx = touch.clientX - cur.x;
+            // nx = touch.clientX - cur.x;
             ny = touch.clientY - cur.y;
-            x = dx+nx;
+            // x = dx+nx;
             y = dy+ny;
             div2.style.left = x+"px";
             div2.style.top = y +"px";
